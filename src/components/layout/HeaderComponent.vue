@@ -1,3 +1,21 @@
+<script setup lang="ts">
+const menuItems = [
+  { name: 'Dashboard', route: '/dashboard' },
+  // { name: 'Predecir 2025', route: '/predict/annual' },
+  // { name: 'Predecir Mes', route: '/predict/month' },
+  // { name: 'Rango Personalizado', route: '/predict/range' },
+  { name: 'Análisis IA', route: '/analyze/ai' },
+  { name: 'Predicciones', route: '/predictions' },
+]
+const headerClass =
+  'bg-green-50 text-green-900 shadow-md shadow-green-500 border-b-4 border-green-600'
+
+const linkClass =
+  'transition-colors duration-300 relative inline-block ' +
+  'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-900 ' +
+  'after:transition-all after:duration-300 hover:after:w-full hover:text-green-700'
+</script>
+
 <template>
   <header :class="headerClass">
     <div class="mx-auto flex h-24 max-w-screen-xl items-center gap-8 px-6 sm:px-8 lg:px-12">
@@ -18,33 +36,14 @@
         </nav>
 
         <div class="flex items-center gap-6">
-          <RouterLink
+          <!-- <RouterLink
             to="/login"
             class="block rounded-md px-6 py-3 text-base font-semibold bg-green-600 hover:bg-green-700 text-white transition-colors duration-300"
           >
             Iniciar Sesión
-          </RouterLink>
+          </RouterLink> -->
         </div>
       </div>
     </div>
   </header>
 </template>
-
-<script setup>
-const menuItems = [
-  { name: 'Predecir', route: '/' },
-  { name: 'Predecir', route: '/' },
-  { name: 'Predecir', route: '/' },
-  { name: 'Predecir', route: '/' },
-  { name: 'Predecir', route: '/' },
-  { name: 'Predecir', route: '/' }
-]
-
-const headerClass =
-  'bg-green-50 text-green-900 shadow-md shadow-green-500 border-b-4 border-green-600'
-
-const linkClass =
-  'transition-colors duration-300 relative inline-block ' +
-  'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-900 ' +
-  'after:transition-all after:duration-300 hover:after:w-full hover:text-green-700'
-</script>
